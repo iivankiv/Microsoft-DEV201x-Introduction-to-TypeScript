@@ -4,11 +4,11 @@
 //TODO (CONSTRUCTORS EXERCISE)
 //2. Delete the name and foodGroups properties.
 //1. Add code so that RecipeCategory inherits from BaseRecipeCategory
-class RecipeCategory {
+class RecipeCategory extends BaseRecipeCategory {
     description: string;
     examples: IExample[];
-    name: string;
-    foodGroups: FoodGroup[];
+    //name: string;
+    //foodGroups: FoodGroup[];
 
     //TODO (INTERFACES EXERCISE)
     //1. Change the constructor's parameter type to IRecipeCategory
@@ -24,6 +24,10 @@ class RecipeCategory {
     
     */
     
-   
+   constructor(recipeCategory: RecipeCategory) {
+       super(recipeCategory.name, recipeCategory.foodGroups);
+       this.description = recipeCategory.description;
+       this.examples = recipeCategory.examples;
+   }
 
 } 

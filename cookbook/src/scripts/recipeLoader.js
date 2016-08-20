@@ -29,11 +29,12 @@ var RecipeLoader = (function () {
                 //TODO (CONSTRUCTORS EXERCISE)
                 //Change the RecipeCategory code below so that the property values are
                 //passed into the constructor rather than set individually.
-                var recipeCategory = new RecipeCategory();
-                recipeCategory.name = category.title;
-                recipeCategory.foodGroups = _this.getFoodGroups(category);
-                recipeCategory.description = category.details;
-                recipeCategory.examples = _this.getExamples(category);
+                var recipeCategory = new RecipeCategory({
+                    name: category.title,
+                    foodGroups: _this.getFoodGroups(category),
+                    description: category.details,
+                    examples: _this.getExamples(category)
+                });
                 recipeCategories.items.push(recipeCategory);
                 var recipeCategorySummary = new RecipeCategorySummary({
                     text: category.title,
@@ -56,8 +57,7 @@ var RecipeLoader = (function () {
             //TODO (CONSTRUCTORS EXERCISE)
             //Change the FoodGroup code below so that the property value is
             //passed into the constructor rather than set individually.
-            var group = new FoodGroup();
-            group.name = foodGroup.title;
+            var group = new FoodGroup(foodGroup.title);
             return group;
         });
     };
