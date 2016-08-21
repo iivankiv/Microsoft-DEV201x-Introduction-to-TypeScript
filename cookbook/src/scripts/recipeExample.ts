@@ -1,6 +1,6 @@
 ﻿//TODO (INTERFACES EXERCISE)
 //1. Add code to make the Example class implement IExample
-class Example {
+class Example implements IExample{
     name: string;
     ingredients: Ingredient[] = [];
     prepTime: string; 

@@ -21,7 +21,7 @@
 
     //TODO (INTERFACES EXERCISE)
     //1. Change the category parameter type to IRecipeCategory
-    renderCategory(category: RecipeCategory) {
+    renderCategory(category: IRecipeCategory) {
         //Update foodgroups bullet points
         var foodGroups = (<HTMLSelectElement> document.getElementById('FoodGroups'));
         foodGroups.value = '';
@@ -41,7 +41,7 @@
 
     //TODO (INTERFACES EXERCISE)
     //1. Change the category parameter type to IRecipeCategory
-    renderExamples(category: RecipeCategory) {
+    renderExamples(category: IRecipeCategory) {
         //Update examples
         var examples = (<HTMLSelectElement> document.getElementById('examples'));
         examples.value = '';

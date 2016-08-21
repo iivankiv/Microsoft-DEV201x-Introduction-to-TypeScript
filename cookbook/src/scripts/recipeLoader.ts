@@ -22,11 +22,11 @@ class RecipeLoader {
             
             //TODO (INTERFACES EXERCISE)
             //Pass IRecipeCategory as the type to the generic below
-            var recipeCategories = new RecipeCategories<RecipeCategory>();
+            var recipeCategories = new RecipeCategories<IRecipeCategory>();
             
             //TODO (INTERFACES EXERCISE)
             //Pass IRecipeCategorySummary as the type to the generic below
-            var recipeCategoriesSummary = new RecipeCategories<RecipeCategorySummary>();
+            var recipeCategoriesSummary = new RecipeCategories<IRecipeCategorySummary>();
             
             categories.forEach((category: any) => {
               
@@ -66,8 +66,7 @@ class RecipeLoader {
             //TODO (CONSTRUCTORS EXERCISE)
             //Change the FoodGroup code below so that the property value is
             //passed into the constructor rather than set individually.
-            var group = new FoodGroup(foodGroup.title);
-            return group;
+            return new FoodGroup(foodGroup.title);
         });
     }
 

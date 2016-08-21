@@ -4,7 +4,7 @@
   
   //TODO (INTERFACES EXERCISE)
   //1. Change the type to use IRecipeCategory instead of RecipeCategory.
-  recipeCategories: RecipeCategories<RecipeCategory>;
+  recipeCategories: RecipeCategories<IRecipeCategory>;
 
   loadRecipes() {
       var el = (<HTMLSelectElement> document.getElementById('RecipeCategory'));
