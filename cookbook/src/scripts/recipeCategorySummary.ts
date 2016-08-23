@@ -1,4 +1,5 @@
-﻿class RecipeCategorySummary implements IRecipeCategorySummary {
+﻿
+class RecipeCategorySummary implements IRecipeCategorySummary {
     text: string;
     title: string;
 

@@ -1,6 +1,7 @@
-﻿//TODO (INTERFACES EXERCISE)
+﻿
+//TODO (INTERFACES EXERCISE)
 //1. Implement the IBaseRecipeCategory interface
-class BaseRecipeCategory {
+class BaseRecipeCategory implements IBaseRecipeCategory{
   
     //TODO (PROPERTIES EXERCISE) 
     //1. Create private "_name" (string type) and "_foodGroups" (FoodGroup[] type) member variables/fields.
