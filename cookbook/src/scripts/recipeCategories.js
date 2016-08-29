@@ -1,11 +1,18 @@
-//TODO (GENERICS EXERCISE)
-//1. Study how generics are used in this class.
-//2. If you're in VS Code, right-click on the RecipeCategories class and select "Find all References".
-//3. Take a moment to examine how the RecipeCategories generic class is used throughout the application.
-var RecipeCategories = (function () {
-    function RecipeCategories() {
-        this.items = [];
+System.register([], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var RecipeCategories;
+    return {
+        setters:[],
+        execute: function() {
+            RecipeCategories = (function () {
+                function RecipeCategories() {
+                    this.items = [];
+                }
+                return RecipeCategories;
+            }());
+            exports_1("RecipeCategories", RecipeCategories);
+        }
     }
-    return RecipeCategories;
-}());
+});
 //# sourceMappingURL=recipeCategories.js.map

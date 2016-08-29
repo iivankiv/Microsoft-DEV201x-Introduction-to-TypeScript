@@ -1,6 +1,8 @@
-﻿class Renderer {
+﻿import Interfaces = require('interfaces');
+
+export class Renderer {
   
-    constructor(public recipeCategoriesSummary: RecipeCategories<IRecipeCategorySummary>) {
+    constructor(public recipeCategoriesSummary: RecipeCategories<Interfaces.IRecipeCategorySummary>) {
         if (recipeCategoriesSummary) {
             this.renderCategories(recipeCategoriesSummary);
         }
@@ -9,7 +11,7 @@
         }
     }
 
-    renderCategories(recipeCategoriesSummary: RecipeCategories<IRecipeCategorySummary>) {
+    renderCategories(recipeCategoriesSummary: RecipeCategories<Interfaces.IRecipeCategorySummary>) {
         var recipeSelect = document.getElementById('RecipeCategory');
         recipeCategoriesSummary.items.forEach((category) => {
             var opt = document.createElement('option');
@@ -21,7 +23,7 @@
 
     //TODO (INTERFACES EXERCISE)
     //1. Change the category parameter type to IRecipeCategory
-    renderCategory(category: IRecipeCategory) {
+    renderCategory(category: Interfaces.IRecipeCategory) {
         //Update foodgroups bullet points
         var foodGroups = (<HTMLSelectElement> document.getElementById('FoodGroups'));
         foodGroups.value = '';
@@ -41,7 +43,7 @@
 
     //TODO (INTERFACES EXERCISE)
     //1. Change the category parameter type to IRecipeCategory
-    renderExamples(category: IRecipeCategory) {
+    renderExamples(category: Interfaces.IRecipeCategory) {
         //Update examples
         var examples = (<HTMLSelectElement> document.getElementById('examples'));
         examples.value = '';

@@ -1,4 +1,5 @@
-﻿class Ingredient {
+﻿
+export class Ingredient {
     name: string;
 
     constructor(name: string) {

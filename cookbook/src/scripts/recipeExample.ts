@@ -1,11 +1,13 @@
-﻿//TODO (INTERFACES EXERCISE)
-//1. Add code to make the Example class implement IExample
-class Example implements IExample{
+﻿import Interfaces = require('interfaces');
+import Ingredient = require('ingredient')
+
+
+export class Example implements Interfaces.IExample{
     name: string;
-    ingredients: Ingredient[] = [];
+    ingredients: Ingredient.Ingredient[] = [];
     prepTime: string; 
 
-    constructor(example: IExample) {
+    constructor(example: Interfaces.IExample) {
         this.name = example.name;
         this.ingredients = example.ingredients;
         this.prepTime = example.prepTime;

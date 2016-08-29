@@ -1,10 +1,19 @@
-﻿class Bootstrapper {
+﻿import Renderer = require('Renderer');
+import Interfaces = require('interfaces');
+import RecipeCategories = require('recipeCategories');
+import RecipeCategory = require('recipeCategory');
+import RecipeCategorySummary = require('recipeCategorySummary');
+import FoodGroup = require('foodGroup');
+import Example = require('recipeExample');
+import Ingredient = require('ingredient');
+
+export class Bootstrapper {
  
   renderer: Renderer;
   
   //TODO (INTERFACES EXERCISE)
   //1. Change the type to use IRecipeCategory instead of RecipeCategory.
-  recipeCategories: RecipeCategories<IRecipeCategory>;
+  recipeCategories: RecipeCategories<Interfaces.IRecipeCategory>;
 
   loadRecipes() {
       var el = (<HTMLSelectElement> document.getElementById('RecipeCategory'));
@@ -37,9 +46,9 @@
 
       let recipeLoader = new RecipeLoader("/json/recipeTypes.json");
       
-      recipeLoader.load().then((recipeData: IRecipeData) => {
+      recipeLoader.load().then((recipeData: Interfaces.IRecipeData) => {
           this.recipeCategories = recipeData.recipeCategories;
-          this.renderer = new Renderer(recipeData.recipeCategoriesSummary);
+          this.renderer = new Renderer.Renderer(recipeData.recipeCategoriesSummary);
       });
   }
   
